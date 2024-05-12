@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flight_details_table thead tr th {
+	@apply px-6 bg-gray-200 text-[#64748b] align-middle border border-solid border-[#f1f5f9] py-3 text-sm uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center;
+}
+.flight_details_table tbody tr {
+	@apply border-b border-solid border-red-500;
+}
+.flight_details_table tbody tr td {
+	@apply text-sm text-center py-3;
+}
+.details_btn {
+	@apply text-sm bg-secondary text-white py-1 px-5 rounded-md mt-1;
+}
+.flight_search_form label {
+	@apply cursor-pointer text-base flex items-center justify-center;
+}
+.input_style {
+	@apply border border-gray-300 rounded-none py-1 px-3 w-full h-[35px] focus:outline-none focus:ring-1 focus:ring-secondary;
+}
