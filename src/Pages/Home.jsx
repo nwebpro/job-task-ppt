@@ -4,7 +4,7 @@ import FlightDetailsTable from '../Components/FlightDetailsTable';
 import FlightSearchForm from '../Components/FlightSearchForm';
 import { useForm } from 'react-hook-form';
 import LoadingAnimation from '../Components/LoadingAnimation';
-const apiBaseUrl = import.meta.env.VITE_BASE_URL;
+const apiBaseUrl = import.meta.env.VITE_LOCAL_BASE_URL;
 
 const Home = () => {
 	const [searchResults, setSearchResults] = useState(null);
@@ -32,7 +32,7 @@ const Home = () => {
 	const onSubmit = (data) => {
 		setIsLoading(true);
 		setTimeout(() => {
-			fetch(`${apiBaseUrl}/src/data/data.json`)
+			fetch(`${apiBaseUrl}/src/data/flight_data.json`)
 				.then((response) => response.json())
 				.then((jsonData) => {
 					setSearchResults(jsonData);
